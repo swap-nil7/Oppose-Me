@@ -1,0 +1,23 @@
+.outer {
+    display: table;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.middle {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.inner {
+    display: flex;
+    justify-content: center;
+}
+
+#start{
+	margin-top: 100px;
+	margin-bottom: auto;
+	margin-left: 40px;
+}
+

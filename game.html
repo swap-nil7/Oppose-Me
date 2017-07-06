@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="game">
+<head>
+	<title>Oppose Me</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="game.css">
+</head>
+<body ng-controller="GameController">
+<center><h2>Score: {{score}}</h2></center>
+	<script type="text/javascript" src="angular.min.js"></script>
+	<script type="text/javascript" src="game.js"></script>	
+	<div class="outer">
+	<div class="middle">
+	<div class="inner">
+	    <table class="board" border=1 bordercolor="white">
+	        <tr ng-repeat="row in board.rows">
+	            <td ng-repeat="spot in row.spots" ng-click='go(spot)'>
+				    <img ng-if="spot.content=='empty'" src="plain.jpg" height="60" width="60">
+				    <img ng-if="spot.content=='good'" src="good.jpg" height="60" width="60">
+				    <img ng-if="spot.content=='bad'" src="bad.jpg" height="60" width="60">
+				</td>
+	        </tr>
+	    </table>
+    </div>
+    </div>
+	</div>
+</body>
+</html>
