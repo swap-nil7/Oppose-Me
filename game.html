@@ -6,11 +6,13 @@
 	<link rel="stylesheet" type="text/css" href="game.css">
 </head>
 <body ng-controller="GameController">
-<center><h2>Score: {{score}}</h2></center>
+	<center>
+		<h3 ng-if="scoreboard">Score: {{score}}</h3>
+		<h3 ng-if="loss">Game Over!</h3>
+		<button id="btn" ng-if="!started" ng-click="start()">Start</button>
+	</center>
 	<script type="text/javascript" src="angular.min.js"></script>
 	<script type="text/javascript" src="game.js"></script>	
-	<div class="outer">
-	<div class="middle">
 	<div class="inner">
 	    <table class="board" border=1 bordercolor="white">
 	        <tr ng-repeat="row in board.rows">
@@ -22,7 +24,5 @@
 	        </tr>
 	    </table>
     </div>
-    </div>
-	</div>
 </body>
 </html>

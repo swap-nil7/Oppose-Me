@@ -1,20 +1,36 @@
 (function(){
 
 	var app = angular.module('game', [ ]);
-	
 	var row = 0;
 	var column = 0;
 
 	app.controller('GameController', function($scope){
 		$scope.board = createBoard();
-		$scope.score = 0;
-		$scope.go = function(spot){
-			var y=check(spot, $scope.board);
-			if(y){
-				$scope.score++;
-			}
+		$scope.started = false;
+
+		$scope.start = function(){
 			clearSpot($scope.board);
 			createRandom($scope.board);
+			$scope.started = true;
+			$scope.loss = false;
+			$scope.scoreboard = true;
+			$scope.score = 0;
+		};
+
+		$scope.go = function(spot){
+			if($scope.started){
+				var y=check(spot, $scope.board);
+				if(y){
+					$scope.score++;
+				}
+				else{
+					$scope.loss = true;
+					$scope.scoreboard = false;
+					$scope.started = false;
+				}
+				clearSpot($scope.board);
+				createRandom($scope.board);
+			}
 		};
 	});
 

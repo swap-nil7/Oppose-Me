@@ -13,11 +13,11 @@
 .inner {
     display: flex;
     justify-content: center;
+    margin-top: 25px;
 }
 
-#start{
-	margin-top: 100px;
-	margin-bottom: auto;
-	margin-left: 40px;
+#btn{
+	margin-top: 25px;
 }
+
 
