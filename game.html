@@ -8,7 +8,8 @@
 <body ng-controller="GameController">
 	<center>
 		<h3 ng-if="scoreboard">Score: {{score}}</h3>
-		<h3 ng-if="loss">Game Over! Your score is {{score}}</h3>
+		<h3 ng-if="loss">Wrong tile! Your score is {{score}}</h3>
+		<h3 ng-if="times">Time's up! Your score is {{score}}</h3>
 		<button id="btn" ng-if="!started" ng-click="start()">Start</button>
 	</center>
 	<script type="text/javascript" src="angular.min.js"></script>
