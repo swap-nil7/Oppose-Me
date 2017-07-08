@@ -1,23 +1,52 @@
-.outer {
-    display: table;
-    position: absolute;
-    height: 100%;
-    width: 100%;
+body{
+    background: linear-gradient(white, lightblue);
+    overflow: hidden;
+    font-family: Roboto;
 }
 
-.middle {
-    display: table-cell;
-    vertical-align: middle;
+h1{
+    color: black;
+    text-align: center;
+    text-shadow: 2px 2px lightblue;
+    text-decoration: underline;
+    font-weight: normal;
 }
 
-.inner {
-    display: flex;
-    justify-content: center;
-    margin-top: 25px;
+h2{
+    text-align: center;
+    font-weight: normal;
 }
 
-#btn{
-	margin-top: 25px;
+.container{
+    width: 90%;
 }
 
+.main{
+    display: inline-block;
+    width: 50%;
+    float: left;
+}
 
+.inner{
+    display: inline-block;
+    width: 50%;
+    float: right;
+}
+
+.board{
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 300px;
+}
+
+h4{
+    padding-left: 10px;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+.content{
+    padding-left: 10px;
+    font-size: 1.25em;
+    cursor: pointer;
+}

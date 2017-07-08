@@ -3,11 +3,27 @@
 	var app = angular.module('game', [ ]);
 	var row = 0;
 	var column = 0;
-	var dim = 7;
+	var dim = 5;
+
+	app.controller("PanelController", function(){
+		this.tab = 1;
+		this.selectTab = function(setTab){
+			this.tab = setTab;
+		};
+		this.isSelected = function(checkTab){
+			return this.tab === checkTab;
+		};
+	});
 
 	app.controller('GameController', function($scope){
-		$scope.board = createBoard();
+		$scope.board = createBoard(dim);
 		$scope.started = false;
+
+		$scope.dimension = function(num){
+			dim = num;
+			clearBoard($scope.board);
+			$scope.board = createBoard(dim);
+		}
 
 		$scope.start = function(){
 			clearSpot($scope.board);
@@ -70,16 +86,16 @@
 	}
 
 	function clearSpot(board){
-		var spotx = board.rows[row].spots[column];
+		var spotx = getSpot(board, row, column);
 		spotx.content = "empty";
 	}
 
 	function createRandom(board){
 		row = Math.floor(Math.random()*dim);
 		column = Math.floor(Math.random()*dim);
-		var x = Math.floor(Math.random()*5);
+		var x = Math.floor(Math.random()*7);
 		var spot = getSpot(board, row, column);
-		if(x%5==0){
+		if(x%7==0){
 			spot.content="good";
 		}
 		else{
@@ -92,7 +108,7 @@
 	}
 
 
-	function createBoard() {
+	function createBoard(dim) {
 	    var board = {};
 	    board.rows = [];
 	    
@@ -108,6 +124,10 @@
 	        board.rows.push(row);
 	    }
 	    return board;
+	}
+
+	function clearBoard(board){
+		board = {};
 	}
 
 })();

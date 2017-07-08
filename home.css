@@ -1,6 +1,5 @@
 body{
 	border: none;
-	font: normal 100%/normal Arial, Helvetica, sans-serif;
 	color: rgba(255,255,255,1);
 	background: -webkit-linear-gradient(60deg, rgb(153,153,153) 12%, rgba(0,0,0,0) 12.5%, rgba(0,0,0,0) 87%, rgb(153,153,153) 87.5%, rgb(153,153,153) 0), -webkit-linear-gradient(-60deg, rgb(153,153,153) 12%, rgba(0,0,0,0) 12.5%, rgba(0,0,0,0) 87%, rgb(153,153,153) 87.5%, rgb(153,153,153) 0), -webkit-linear-gradient(60deg, rgb(153,153,153) 12%, rgba(0,0,0,0) 12.5%, rgba(0,0,0,0) 87%, rgb(153,153,153) 87.5%, rgb(153,153,153) 0), -webkit-linear-gradient(-60deg, rgb(153,153,153) 12%, rgba(0,0,0,0) 12.5%, rgba(0,0,0,0) 87%, rgb(153,153,153) 87.5%, rgb(153,153,153) 0), -webkit-linear-gradient(30deg, rgb(187,187,187) 25%, rgba(0,0,0,0) 25.5%, rgba(0,0,0,0) 75%, rgb(187,187,187) 75%, rgb(187,187,187) 0), -webkit-linear-gradient(30deg, rgb(187,187,187) 25%, rgba(0,0,0,0) 25.5%, rgba(0,0,0,0) 75%, rgb(187,187,187) 75%, rgb(187,187,187) 0), rgb(170, 170, 170);
 	background: -moz-linear-gradient(30deg, rgb(153,153,153) 12%, rgba(0,0,0,0) 12.5%, rgba(0,0,0,0) 87%, rgb(153,153,153) 87.5%, rgb(153,153,153) 0), -moz-linear-gradient(150deg, rgb(153,153,153) 12%, rgba(0,0,0,0) 12.5%, rgba(0,0,0,0) 87%, rgb(153,153,153) 87.5%, rgb(153,153,153) 0), -moz-linear-gradient(30deg, rgb(153,153,153) 12%, rgba(0,0,0,0) 12.5%, rgba(0,0,0,0) 87%, rgb(153,153,153) 87.5%, rgb(153,153,153) 0), -moz-linear-gradient(150deg, rgb(153,153,153) 12%, rgba(0,0,0,0) 12.5%, rgba(0,0,0,0) 87%, rgb(153,153,153) 87.5%, rgb(153,153,153) 0), -moz-linear-gradient(60deg, rgb(187,187,187) 25%, rgba(0,0,0,0) 25.5%, rgba(0,0,0,0) 75%, rgb(187,187,187) 75%, rgb(187,187,187) 0), -moz-linear-gradient(60deg, rgb(187,187,187) 25%, rgba(0,0,0,0) 25.5%, rgba(0,0,0,0) 75%, rgb(187,187,187) 75%, rgb(187,187,187) 0), rgb(170, 170, 170);
@@ -20,6 +19,7 @@ h1{
 h2{
 	text-align: center;
 	color: black;
+	text-shadow: 1px 1px white;
 }
 
 .main{
@@ -42,19 +42,19 @@ h2{
 li{
 	font-weight: bold;
 	color: black;
-	font-size: 1.5em;
+	font-size: 1.2em;
 }
 
 .start{
 	display: inline-block;
 	text-align: left;
 	color: blue;
-	margin-top: 150px;
+	margin-top: 50px;
 	text-shadow: 2px 2px lightblue;
 	cursor: pointer;
-	font-size: 2.75em;
+	font-size: 1.75em;
 	background: white;
-	padding: 5px 15px;
+	padding: 4px 20px;
 	border: black 2px solid;
 }
 
@@ -64,10 +64,10 @@ li{
 
 h4{
 	padding-left: 10px;
-	font-size: 1.5em;
+	font-size: 1.25em;
 	font-weight: bold;
 }
 .content{
 	padding-left: 10px;
-	font-size: 1.25em;
+	font-size: 1.1em;
 }
